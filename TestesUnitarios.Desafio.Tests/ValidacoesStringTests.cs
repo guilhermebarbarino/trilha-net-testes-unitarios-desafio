@@ -9,11 +9,9 @@ public class ValidacoesStringTests
     [Fact]
     public void DeveRetornar6QuantidadeCaracteresDaPalavraMatrix()
     {
-        //TODO: Corrigir a variável "texto" e "resultadoEsperado" da seção Arrange
-
         // Arrange
-        var texto = "a";
-        var resultadoEsperado = 0;
+        var texto = "Matrix"; // Corrected: The text to be tested is "Matrix"
+        var resultadoEsperado = 6; // Corrected: Expected character count for "Matrix" is 6
 
         // Act
         var resultado = _validacoes.RetornarQuantidadeCaracteres(texto);
@@ -29,13 +27,11 @@ public class ValidacoesStringTests
         var texto = "Esse é um texto qualquer";
         var textoProcurado = "qualquer";
 
-        //TODO: Corrigir a chamada do método "ContemCaractere" da seção Act
         // Act
-         _validacoes.ContemCaractere(texto, textoProcurado);
+        var resultado = _validacoes.ContemCaractere(texto, textoProcurado); // Corrected: Store the result of the method call
 
         // Assert
-        //TODO: Corrigir o Assert.True com base no retorno da chamada ao método
-        Assert.True(true);
+        Assert.True(resultado); // Corrected: Assert the result of the method call
     }
 
     [Fact]
@@ -49,18 +45,15 @@ public class ValidacoesStringTests
         var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
 
         // Assert
-        //TODO: Corrigir o Assert.False com base no retorno da chamada ao método
-        Assert.False(true);
+        Assert.False(resultado); // Corrected: Assert the result is false since "teste" is not in the text
     }
 
-    //TODO: Corrigir a anotação [Fact]
+    [Fact] // Corrected: Added the [Fact] annotation to this method
     public void TextoDeveTerminarComAPalavraProcurado()
     {
-        //TODO: Corrigir a variável "textoProcurado" seção Arrange
-
         // Arrange
         var texto = "Começo, meio e fim do texto procurado";
-        var textoProcurado = "teste";
+        var textoProcurado = "procurado"; // Corrected: The expected ending word should be "procurado"
 
         // Act
         var resultado = _validacoes.TextoTerminaCom(texto, textoProcurado);
